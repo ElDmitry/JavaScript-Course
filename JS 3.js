@@ -9,7 +9,7 @@ console.log(`Так тримати!!!`);
 /*
 let password = "Test!123";
 let checkPassword = prompt("Введіть пароль");
-if(password === pass){
+if(password === checkPassword){
 console.log("Ласкаво просимо!")
 }
 else{
@@ -58,22 +58,24 @@ else{
 //№6
 /*
 let numberOfMonth = +prompt("Введіть номер місяця");
-if(numberOfMonth === 1 || numberOfMonth === 2 || numberOfMonth === 12) {
+let isWinter = numberOfMonth === 1 || numberOfMonth === 2 || numberOfMonth === 12;
+let isSpring = numberOfMonth === 3 || numberOfMonth === 4 || numberOfMonth === 5;
+let isSummer = numberOfMonth === 6 || numberOfMonth === 7 || numberOfMonth === 8;
+let isAutumn = numberOfMonth === 9 || numberOfMonth === 10 || numberOfMonth === 11;
+
+if(isWinter) {
     console.log("Зима");
 }
-else if(numberOfMonth === 3 || numberOfMonth === 4 || numberOfMonth === 5) {
+else if(isSpring) {
     console.log("Весна");
 }
-else if(numberOfMonth === 6 || numberOfMonth === 7 || numberOfMonth === 8) {
+else if(isSummer) {
     console.log("Літо");
 }
-else if(numberOfMonth === 9 || numberOfMonth === 10 || numberOfMonth === 11) {
+else if(isAutumn) {
         console.log("Осінь");
 }
-else if(numberOfMonth > 12 || numberOfMonth <= 0){
-    console.log("Некоректний номер місяця")
-}
-else{
+else {
     console.log("Некоректний номер місяця");
 };
 */
