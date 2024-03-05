@@ -57,7 +57,7 @@ sumOrConcatination();
 */
 
 //#6
-
+/*
 function fib(num){
     let a = 1;
     let b = 1;
@@ -74,10 +74,14 @@ function fib(num){
 console.log(fib(6));
 console.log(fib(7));
 console.log(fib(8));
+*/
 
-/*
 function fib(n) {
-   
+    if(n === 0) 
+    return 0;
+    if(n === 1)
+    return 1;
+
     let fibNum1 = 0;
     let fibNum2 = 1;
     let fibResult;
@@ -90,9 +94,9 @@ function fib(n) {
   
     return fibResult;
   }
+  console.log(fib(0));
+  console.log(fib(1));
+  console.log(fib(3));
+  console.log(fib(7));
+  console.log(fib(9));
   
-  // Приклад використання:
-  console.log(fib(6)); // Виведе 2
-  console.log(fib(7)); // Виведе 13
-  console.log(fib(9)); // Виведе 34
-  */
