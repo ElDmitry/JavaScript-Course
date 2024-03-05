@@ -27,7 +27,7 @@ console.log(result)
  */
 
 //#4
-
+/*
 let pow = function (x = 3, n = 2){
     let result = 1;
     for(let i = 0; i < n; i++){
@@ -36,7 +36,7 @@ let pow = function (x = 3, n = 2){
     return result;
 };
 console.log(pow(3,3));
-
+*/
     
 
 //#5
@@ -57,22 +57,42 @@ sumOrConcatination();
 */
 
 //#6
-/*
-let a = 1;
-let b = 1;
-let result = 1;
+
 function fib(num){
+    let a = 1;
+    let b = 1;
+    let result;
+   
     for(let i = 3; i <= num; i++){
+        
+        result = a + b;
         a = b;
         b = result;
-        result = a + b;
     }
-    console.log(result);
-    a = 1;
-    b = 1;
-    result = 1;
+    return result;
+}
+console.log(fib(6));
+console.log(fib(7));
+console.log(fib(8));
+
+/*
+function fib(n) {
+   
+    let fibNum1 = 0;
+    let fibNum2 = 1;
+    let fibResult;
+  
+    for (let i = 2; i <= n; i++) {
+      fibResult = fibNum1 + fibNum2;
+      fibNum1 = fibNum2;
+      fibNum2 = fibResult;
     }
-fib(6);
-fib(7);
-fib(8);
-*/
+  
+    return fibResult;
+  }
+  
+  // Приклад використання:
+  console.log(fib(6)); // Виведе 2
+  console.log(fib(7)); // Виведе 13
+  console.log(fib(9)); // Виведе 34
+  */
