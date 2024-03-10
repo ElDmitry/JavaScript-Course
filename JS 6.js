@@ -82,34 +82,24 @@ generateNumberInLimit(24, 50);
 
 //#2
 /*
-
 function toCamelCase(str){
-    let indexOfSymbol = str.indexOf('_');
-    
-    //replaceAll('_','')
-    console.log(a)
-}
-
-toCamelCase("current_user")
-*/
-function toCamelCase(str) {
     let result = '';
     let nextUpperLetter = false;
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; i++){
         const currentChar = str[i];
 
-        if (currentChar === '_') {
+        if (currentChar === '_'){
             nextUpperLetter = true;
-        } else {
-            result = nextUpperLetter ? currentChar.toUpperCase() : currentChar.toLowerCase();
+        } else{
+            result += nextUpperLetter ? currentChar.toUpperCase() : currentChar.toLowerCase();
             nextUpperLetter = false;
         }
     }
-
     console.log(result);
-}
+};
 
 toCamelCase("current_user");
 toCamelCase("user_first_name");
 toCamelCase("car");
+*/
