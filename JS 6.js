@@ -43,12 +43,12 @@ console.log(generateRandomFloat(3));
 function isPalindrom(str){
     let newStr = str.toLowerCase().replaceAll(' ','');
     let palindrom = newStr.split('').reverse().join('');
-    console.log(newStr === palindrom);
+    return newStr === palindrom;
 }
 
-isPalindrom('радар');
-isPalindrom('І розморозь зором зорі');
-isPalindrom('Привіт');
+console.log(isPalindrom('радар'));
+console.log(isPalindrom('І розморозь зором зорі'));
+console.log(isPalindrom('Привіт'));
 */
 
 //#2
@@ -59,12 +59,12 @@ function sumOfNumbers(number){
     for (let index of arr) {
         result += Number(index);
     }
-    console.log(`${result}`);
+    return result;
 
 };
-sumOfNumbers(12)
-sumOfNumbers(122)
-sumOfNumbers(12256)
+console.log(sumOfNumbers(12));
+console.log(sumOfNumbers(122));
+console.log(sumOfNumbers(12256));
 */
 
 
@@ -72,12 +72,10 @@ sumOfNumbers(12256)
 //#1
 /*
 function generateNumberInLimit(start, end){
-    start = Math.ceil(start);
-    end = Math.floor(end);
-    console.log(Math.floor(Math.random() * (end - start) + start));
+    return Math.floor(Math.random() * (end - start) + start);
 }
-generateNumberInLimit(1, 10);
-generateNumberInLimit(24, 50);
+console.log(generateNumberInLimit(1, 10));
+console.log(generateNumberInLimit(24, 50));
 */
 
 //#2
@@ -96,10 +94,10 @@ function toCamelCase(str){
             nextUpperLetter = false;
         }
     }
-    console.log(result);
+    return result;
 };
 
-toCamelCase("current_user");
-toCamelCase("user_first_name");
-toCamelCase("car");
+console.log(toCamelCase("current_user"));
+console.log(toCamelCase("user_first_name"));
+console.log(toCamelCase("car"));
 */
