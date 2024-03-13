@@ -115,7 +115,7 @@ const person = {
 */
 
 //#7
-/*
+
 let books = {
     countries: [
      {
@@ -176,17 +176,13 @@ let books = {
     ]
    }
 
-let {countries: [{authors: [{books: [,,{title: firstBook}]}]}]} = books;
-let {countries: [{authors: [{books: [{title: thirdBook}]}]}]} = books;
+let {countries: [{authors: [{books: [firstBook, ,thirdBook]}]},{authors: [{books: [,{title: secondKidrukBookName}]},{books: [{year: yearOfPublicationKobzar}]}]}]} = books;
 
-let {countries: [, {authors: [{books: [,{title: secondKidrukBookName}]}]}]} = books;
 
-let {countries: [, {authors: [, {books: [{title: nameOfKobzar}]}]}]} = books;
-let {countries: [, {authors: [, {books: [{year: yearOfPublicationKobzar}]}]}]} = books;
 
-console.log(thirdBook);
+
 console.log(firstBook);
+console.log(thirdBook);
 console.log(secondKidrukBookName);
 console.log(yearOfPublicationKobzar);
-console.log(nameOfKobzar);
-  */
+
