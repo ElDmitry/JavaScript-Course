@@ -3,8 +3,10 @@
 //#1
 /*
 let array = [2, 7, 6, 3, 9, 1, 4, 5, 8, 10];
-let result = array.slice(0);
-console.log(result);
+array.forEach(item => {
+    console.log(item);
+});
+
 
 let array = [2, 7, 6, 3, 9, 1, 4, 5, 8, 10];
 let newArray = array.map((item) => {
