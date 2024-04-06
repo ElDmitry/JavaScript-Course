@@ -140,10 +140,13 @@ let actor = {
     lastFilm: "Venom: Let There Be Carnage"
 };
 
-function cloneObject(obj,key1,key2){
+function cloneObject(obj,...keys){
     const stringifyObj = JSON.stringify(obj);
     const copyObj = JSON.parse(stringifyObj);
-    delete copyObj[key1,key2];
+    keys.forEach(key => {
+        if (copyObj.hasOwnProperty(key))
+        delete copyObj[key];
+    });
     return copyObj;
 };
 
