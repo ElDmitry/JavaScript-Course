@@ -73,17 +73,16 @@ console.log(actor);
 /*
 function Animal(voice){
     this.voice = voice;
-    this.say = function(){
-        return this.voice
-    }
 }
-
-const dog = new Animal('ГАВ!!!');
-console.log(dog.say())
-
-Object.defineProperty(dog, 'say',{
+Animal.prototype.say = function(){
+    return this.voice;
+};
+Object.defineProperty(Animal.prototype, 'say',{
     enumerable: false,
 });
+    
+const dog = new Animal('ГАВ!!!');
+console.log(dog.say())
 
 for (const key in dog) {
     console.log(key)
@@ -141,8 +140,7 @@ let actor = {
 };
 
 function cloneObject(obj,...keys){
-    const stringifyObj = JSON.stringify(obj);
-    const copyObj = JSON.parse(stringifyObj);
+    const copyObj = structuredClone(obj);
     keys.forEach(key => {
         if (copyObj.hasOwnProperty(key))
         delete copyObj[key];
