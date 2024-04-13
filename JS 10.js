@@ -1,7 +1,7 @@
 'use strict'
 
 //#1
-
+/*
 let employee1 = {
     fullName : 'John Wick',
     position : 'QA Engineer',
@@ -20,8 +20,9 @@ function showInfo(currency = ''){
 
 showInfo.apply(employee1, ['$']);
 showInfo.apply(employee2, ['UAH']);
-
+*/
 //#2
+
 let showInfoOfEmployee1 = showInfo.bind(employee1);
 showInfoOfEmployee1('CAD');
 let showInfoOfEmployee2 = showInfo.bind(employee2);
