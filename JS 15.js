@@ -25,7 +25,7 @@ repeat('hi');
 /*
 function repeat(msg){
     console.log(msg);
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
         repeat(msg)
     }, 2000);
 };
@@ -83,7 +83,7 @@ class Timer {
 
     start() {
         this.timerId = setInterval(() => {
-                   this.count++;
+                this.count++;
                 console.log(this.count);
         }, 1000);
     }
@@ -95,15 +95,13 @@ class Timer {
 
     pause() {
         clearInterval(this.timerId);
-        setTimeout(() => {
-        }, 2000)
     }
 
     show() {
         if (this.count === 0){
             console.log(`0 - таймер сброшений`)
         } else {
-            console.log(`${this.count}`);
+            console.log(this.count);
         }
     }
 }
