@@ -39,7 +39,7 @@ new Promise((resolve, reject) => {
 //#4
 /*
 function showResults(promise1, promise2, promise3) {
-    Promise.any([promise1,promise2,promise3])
+    Promise.race([promise1,promise2,promise3])
         .then(results => {
             results.forEach(result => {
                 console.log(result)
@@ -70,7 +70,7 @@ showResults(promis1,promis3,promis2);
 //#5
 /*
 function showFirst(promise1, promise2, promise3){
-    const results = Promise.race([promise1, promise2, promise3]);
+    const results = Promise.any([promise1, promise2, promise3]);
     results
     .then((result) => {
         console.log(result);
