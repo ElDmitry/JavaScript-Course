@@ -39,7 +39,7 @@ new Promise((resolve, reject) => {
 //#4
 /*
 function showResults(promise1, promise2, promise3) {
-    Promise.allSettled([promise1,promise2,promise3])
+    Promise.any([promise1,promise2,promise3])
         .then(results => {
             results.forEach(result => {
                 console.log(result)
@@ -147,7 +147,7 @@ console.log(fibonacciRecursive(6));
 */
 
 //#9
-
+/*
 console.log("start");
 
 new Promise((resolve, reject) => {
@@ -179,6 +179,6 @@ new Promise((resolve, reject) => {
   });
 
 console.log("end");
-
+*/
 
 
