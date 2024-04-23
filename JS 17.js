@@ -8,11 +8,11 @@ button.addEventListener('click', () => {
     console.log('Лівий клік');
 });
 
-button.addEventListener('contextmenu', (event) => {
+button.addEventListener('contextmenu', () => {
     console.log('Правий клік');
 });
 
-button.addEventListener('dblclick', (event) => {
+button.addEventListener('dblclick', () => {
     console.log('Подвійний клік');
 });
 */
@@ -41,61 +41,85 @@ input.addEventListener('input', updateText);
 
 //#4
 
-// JS 17.js
+/*
+let button = document.querySelector('button');
+button.addEventListener('click', function() {
+    const colorName = document.querySelector('input').value;
+    const reservedColors = [
+        'aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon',
+        'navy', 'olive', 'orange', 'purple', 'red', 'silver', 'teal', 'white', 'yellow'
+    ];
 
-// Отримуємо посилання на елементи DOM
-const value1Input = document.querySelector('.value1');
-const value2Input = document.querySelector('.value2');
-const resultInput = document.querySelector('.result');
-const buttons = document.querySelectorAll('.buttons-container button');
-
-let operator = ''; // змінна для зберігання вибраного оператора
-let num1 = ''; // змінна для зберігання першого числа
-
-// Функція для обчислення результату
-function calculate() {
-    const num2 = parseFloat(value2Input.value);
-
-    let result;
-
-    switch (operator) {
-        case '+':
-            result = parseFloat(num1) + num2;
-            break;
-        case '-':
-            result = parseFloat(num1) - num2;
-            break;
-        case '*':
-            result = parseFloat(num1) * num2;
-            break;
-        case '/':
-            result = parseFloat(num1) / num2;
-            break;
-        default:
-            result = 'Виберіть операцію';
+    if (reservedColors.includes(colorName)) {
+        const colorButton = document.createElement('button');
+        colorButton.textContent = colorName;
+        colorButton.addEventListener('click', function() {
+            document.body.style.backgroundColor = colorName;
+        });
+        document.body.appendChild(colorButton);
+    } else {
+        alert('Такого кольору немає');
     }
-
-    resultInput.value = result;
-}
-
-// Додаємо обробник подій для кожної кнопки
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        if (!isNaN(button.textContent)) {
-            if (operator === '') {
-                num1 += button.textContent;
-                value1Input.value = num1;
-            } else {
-                value2Input.value += button.textContent;
-            }
-        } else if (button.textContent === '=') {
-            calculate();
-        } else {
-            operator = button.textContent;
-            value2Input.focus();
-        }
-    });
 });
+*/
 
 
+
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const value1Input = document.querySelector('.value1');
+    const value2Input = document.querySelector('.value2');
+    const resultInput = document.querySelector('.result');
+
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        if (button.textContent === '=') {
+          calculate();
+        } else {
+          operator = button.textContent;
+        }
+      });
+    });
+
+    let operator = '';
+
+    function calculate() {
+      const value1 = parseFloat(value1Input.value);
+      const value2 = parseFloat(value2Input.value);
+
+      if (isNaN(value1) || isNaN(value2)) {
+        resultInput.value = 'Invalid input';
+        return;
+      }
+
+      let result;
+      switch (operator) {
+        case '+':
+          result = value1 + value2;
+          break;
+        case '-':
+          result = value1 - value2;
+          break;
+        case '*':
+          result = value1 * value2;
+          break;
+        case '/':
+          if (value2 === 0) {
+            resultInput.value = 'Ділення на нуль неможливе';
+            return;
+          }
+          result = value1 / value2;
+          break;
+        default:
+          resultInput.value = 'Невідома операція';
+          return;
+      }
+
+      resultInput.value = result;
+    }
+  });
+*/
 
