@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="./JS 16.js"></script>
-</body>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form class="create-form">
+      <label>
+        Tilte:
+        <input type="text" class="title" />
+      </label>
+      <label>
+        Body:
+        <input type="text" class="body" />
+      </label>
+      <button class="btn-create">Create</button>
+    </form>
+
+    <ul class="posts">
+      <div class="loader hide"></div>
+      <h2 class="error hide"></h2>
+
+      <li class="post">
+        <h3 class="show">9 Event Loop</h3>
+        <form class="edit-form hide">
+          <input class="edit" type="text" value="Event Loop" />
+          <button class="btn-save">Save</button>
+        </form>
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+        <p>
+          Event Loop у JavaScript відповідає за управління чергами подій і
+          виконання асинхронного коду.
+        </p>
+      </li>
+    </ul>
+    <script type="module" src="./JS 18.js"></script>
+  </body>
 </html>
